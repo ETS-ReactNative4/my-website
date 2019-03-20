@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import promise from 'redux-promise';
+
+import reducers from './reducers';
+import Tab from './components/tab.js';
+import Home from './components/home.js';
+import ContactForm from './components/contact.js';
+import Resume from './components/resume.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <div>
+            <Tab />
+            <div>
+              <Switch>
+                <Route path="/contact" component={ContactForm}/>
+                <Route path="/resume" component={Resume}/>
+                <Route path="/" component={Home}/>
+              </Switch>
+            </div>
+          </div>
+
+        </div>
+      </BrowserRouter>
     );
   }
 }
