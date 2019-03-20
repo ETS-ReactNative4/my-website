@@ -22,7 +22,7 @@ class Home extends Component {
             alt="Ian Lin"
             size={1000}
           />
-          <p class="lead">I am a UBC student with a degree in Psychology and Compsci currently looking for a job.</p>
+          <p class="lead">I am a UBC student with a degree in Psychology and Computer Science currently looking for a job.</p>
           <hr class="my-4" />
           <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
           <p class="lead">
