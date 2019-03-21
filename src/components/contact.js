@@ -51,7 +51,7 @@ class ContactForm extends Component {
           fullWidth
         />
         <button class="btn btn-primary" type="submit">Submit</button>
-        <div>
+        {/* <div>
         <Button
           aria-owns={anchorEl ? 'simple-menu' : null}
           aria-haspopup="true"
@@ -69,7 +69,7 @@ class ContactForm extends Component {
           <MenuItem onClick={this.handleClose}>My account</MenuItem>
           <MenuItem onClick={this.handleClose}>Logout</MenuItem>
         </Menu>
-      </div>
+      </div> */}
       </Paper>
     );
   }
