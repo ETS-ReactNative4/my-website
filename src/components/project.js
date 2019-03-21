@@ -24,7 +24,7 @@ const styles = theme => ({
   },
 });
 
-class Resume extends React.Component {
+class Project extends React.Component {
   state = {
     chipData: [
       { key: 0, label: 'React' },
@@ -89,8 +89,8 @@ class Resume extends React.Component {
 }
 }
 
-Resume.propTypes = {
+Project.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Resume);
+export default withStyles(styles)(Project);

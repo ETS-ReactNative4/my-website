@@ -9,7 +9,8 @@ import reducers from './reducers';
 import Tab from './components/tab.js';
 import Home from './components/home.js';
 import ContactForm from './components/contact.js';
-import Resume from './components/resume.js';
+import Work from './components/work.js';
+import Project from './components/project.js';
 
 class App extends Component {
   render() {
@@ -21,7 +22,8 @@ class App extends Component {
             <div>
               <Switch>
                 <Route path="/contact" component={ContactForm}/>
-                <Route path="/resume" component={Resume}/>
+                <Route path="/work" component={Work}/>
+                <Route path="/project" component={Project}/>
                 <Route path="/" component={Home}/>
               </Switch>
             </div>
