@@ -58,7 +58,6 @@ class TabsButtonForce extends React.Component {
             <Tab label="Home" icon={<House />} component={Link} to="/"></Tab>
             <Tab label="Work" icon={<Work />} component={Link} to="/work"/>
             <Tab label="Projects" icon={<Assignment />} component={Link} to="/projects"/>
-            <Tab label="App" icon={<Assignment />} component={Link} to="/podcastsearch"/>
             <Tab label="Contact" icon={<Phone />} component={Link} to="/contact"/>
             <Tab label="Under Construction" icon={<HelpIcon />} disabled />
           </Tabs>
