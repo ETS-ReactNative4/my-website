@@ -1,36 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import promise from 'redux-promise';
-
-import reducers from './reducers';
 import Tab from './components/tab.js';
-import Home from './components/home.js';
-import ContactForm from './components/contact.js';
-import Work from './components/work.js';
-import Project from './components/project.js';
+import Home from './components/Home.js';
+import ContactForm from './components/Contact.js';
+import WorkPage from './components/WorkPage.js';
+import Projects from './components/projects.js';
+import PodcastSearch from './components/PodcastSearch';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme();
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <div className="App">
-          <div>
-            <Tab />
+      <MuiThemeProvider theme={theme}>
+        <BrowserRouter>
+          <div className="App">
             <div>
-              <Switch>
-                <Route path="/contact" component={ContactForm}/>
-                <Route path="/work" component={Work}/>
-                <Route path="/project" component={Project}/>
-                <Route path="/" component={Home}/>
-              </Switch>
+              <Tab />
+              <div>
+                <Switch>
+                  <Route path="/contact" component={ContactForm}/>
+                  <Route path="/work" component={WorkPage}/>
+                  <Route path="/projects" component={Projects}/>
+                  <Route path="/podcastSearch" component={PodcastSearch}/>
+                  <Route path="/" component={Home}/>
+                </Switch>
+              </div>
             </div>
-          </div>
 
-        </div>
-      </BrowserRouter>
+          </div>
+        </BrowserRouter>
+      </MuiThemeProvider>
     );
   }
 }
